@@ -22,10 +22,11 @@ function Navbar() {
       {/* Home Image */}
       <div style={styles.imageWrapper}>
         <img
-         src={`${process.env.PUBLIC_URL}/assets/home2.avif`} alt="Home" style={styles.homeImage} />
-
+          src={`${process.env.PUBLIC_URL}/assets/home2.avif`} // Using the correct path with process.env.PUBLIC_URL
+          alt="Home"
+          style={styles.homeImage}
+        />
         
-
         {/* Navigation Buttons on Image */}
         <div style={styles.navButtonsWrapper}>
           <Link to="/" style={styles.link}>
