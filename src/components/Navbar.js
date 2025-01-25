@@ -61,14 +61,10 @@ function Navbar() {
           {isDropdownVisible && (
             <select onChange={handleNavigation} style={styles.dropdown}>
               <option value="fruits">Items</option>
-              <option value="grapes-section">Grapes</option>
-              <option value="potato-section">Potatoes</option>
-              <option value="mango-section">Mango</option>
-              <option value="orange-section">Orange</option>
-              <option value="apple-section">Apple</option>
-              <option value="grapefruit-section">Grapefruit</option>
-              <option value="melon-section">Melon</option>
-              <option value="guava-section">Guava</option>
+              <option value="sea-transport">Transport by Sea</option>
+              <option value="air-transport">Transport by Air</option>
+              <option value="road-transport">Transport by Road</option>
+
             </select>
           )}
         </div>

@@ -7,7 +7,7 @@ function ContactUS() {
 
       <div style={styles.content}>
         <p style={styles.paragraph}>
-          <strong>Email:</strong> <span style={styles.infoText}>waseem-khan-ghori-mqm@outlook.com</span>
+          <strong>Email:</strong> <span style={styles.infoText}>Khan.waseem51@hotmail.com</span>
         </p>
 
         <p style={styles.paragraph}>
@@ -15,11 +15,23 @@ function ContactUS() {
         </p>
 
         <p style={styles.paragraph}>
-          <strong>Location:</strong> 
-          <span style={styles.infoText}> House#380 College Road, Sir Syed Town 213, Faisalabad, Pakistan, 38000</span>
+          <strong>Colombo Number:</strong> <span style={styles.infoText}>+94 767354531</span>
         </p>
 
-       
+        <p style={styles.paragraph}>
+          <strong>WhatsApp Numbers:</strong>
+          <ul style={styles.list}>
+            <li style={styles.listItem}><span style={styles.infoText}>+92 332 8290382</span></li>
+            <li style={styles.listItem}><span style={styles.infoText}>+94 767354531</span></li>
+          </ul>
+        </p>
+
+        <p style={styles.paragraph}>
+          <strong>Location:</strong>
+          <span style={styles.infoText}>
+            House#38 College Road, Sir Syed Town 212, Faisalabad, Pakistan, 38000
+          </span>
+        </p>
       </div>
     </div>
   );
@@ -55,6 +67,16 @@ const styles = {
     color: '#5D8AA8',
     fontWeight: '600',
     wordBreak: 'break-word',
+  },
+  list: {
+    marginTop: '10px',
+    paddingLeft: '20px',
+    listStyleType: 'disc',
+  },
+  listItem: {
+    marginBottom: '5px',
+    color: '#333',
+    fontSize: '16px',
   },
   contactForm: {
     marginTop: '30px',
@@ -95,7 +117,6 @@ const styles = {
     fontSize: '18px',
     cursor: 'pointer',
   },
-  // Media query for responsiveness
   '@media (max-width: 768px)': {
     container: {
       padding: '20px',

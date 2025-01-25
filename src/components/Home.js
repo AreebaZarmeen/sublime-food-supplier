@@ -81,21 +81,21 @@ function Home() {
           </p>
           <div style={styles.imageGrid}>
             <img 
-              src={`${process.env.PUBLIC_URL}/assets/orangeBucket.jpeg`} 
+              src={`${process.env.PUBLIC_URL}/assets/makai.jpg`} 
               alt="Packaging Process" 
               style={styles.gridImage} 
               role="img" 
               aria-label="Orange packaging"
             />
             <img 
-              src={`${process.env.PUBLIC_URL}/assets/Grapes.jpeg`} 
+              src={`${process.env.PUBLIC_URL}/assets/peas.jpg`} 
               alt="Packaging Process" 
               style={styles.gridImage} 
               role="img" 
               aria-label="Grapes packaging"
             />
             <img 
-              src={`${process.env.PUBLIC_URL}/assets/potatoPack.jpeg`} 
+              src={`${process.env.PUBLIC_URL}/assets/redChili.jpg`} 
               alt="Packaging Process" 
               style={styles.gridImage} 
               role="img" 
@@ -180,14 +180,14 @@ function Home() {
               aria-label="Fresh potatoes"
             />
             <img 
-              src={`${process.env.PUBLIC_URL}/assets/Grapes.jpeg`} 
+              src={`${process.env.PUBLIC_URL}/assets/banana.jpg`} 
               alt="Fresh Produce" 
               style={styles.gridImage} 
               role="img" 
               aria-label="Fresh grapes"
             />
             <img 
-              src={`${process.env.PUBLIC_URL}/assets/orangeBucket.jpeg`} 
+              src={`${process.env.PUBLIC_URL}/assets/rice.jpg`} 
               alt="Fresh Produce" 
               style={styles.gridImage} 
               role="img" 
