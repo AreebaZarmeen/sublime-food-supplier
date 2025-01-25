@@ -22,7 +22,7 @@ function Navbar() {
       {/* Home Image */}
       <div style={styles.imageWrapper}>
         <img
-          src="/assets/home2.avif" // Replace with your image path
+          src="/public/assets/home2.avif" // Replace with your image path
           alt="Home"
           style={styles.homeImage}
         />
