@@ -15,7 +15,7 @@ function Home() {
       <p style={styles.introText}>
         We are a leading global exporter of fresh fruits and vegetables. Our journey is driven by our commitment to quality, sustainability, and fresh produce that arrives on time, every time. Whether you are a retailer, wholesaler, or distributor, we ensure top-quality produce that meets the demands of your business.
       </p>
-      
+
       {/* Section 1: Our Fields */}
       <div style={styles.section}>
         <div style={styles.imageWrapper}>
@@ -286,8 +286,8 @@ const styles = {
   },
   gridImage: {
     width: '100%',
-    height: '200px', // Set a fixed height for uniformity
-    objectFit: 'cover', // Ensures images fill the box without distortion
+    height: '200px',
+    objectFit: 'cover',
     borderRadius: '8px',
     boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
   },
@@ -298,7 +298,24 @@ const styles = {
     transition: 'color 0.3s ease',
   },
   contactLinkHover: {
-    color: '#3e8e41', // A darker green for hover effect
+    color: '#3e8e41',
+  },
+  // Add media queries for responsiveness
+  '@media (max-width: 768px)': {
+    section: {
+      flexDirection: 'column',
+    },
+    imageWrapper: {
+      paddingRight: '0',
+      marginBottom: '20px',
+      flex: '1 1 100%',
+    },
+    textWrapper: {
+      flex: '1 1 100%',
+    },
+    imageGrid: {
+      gridTemplateColumns: 'repeat(auto-fill, minmax(150px, 1fr))', // Adjust grid for mobile
+    },
   },
 };
 

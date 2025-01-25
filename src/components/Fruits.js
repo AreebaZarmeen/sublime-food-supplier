@@ -179,31 +179,6 @@ function Fruits() {
           </p>
         </div>
       </div>
-
-      {/* Guava Section */}
-      <div id="guava-section" style={styles.section}>
-        <div style={styles.imageWrapper}>
-          <img src={`${process.env.PUBLIC_URL}/assets/guava.jpg`} alt="Guava" style={styles.image} />
-        </div>
-        <div style={styles.textWrapper}>
-          <h3 style={styles.sectionTitle}>Guava</h3>
-          <p style={styles.description}>
-            Our guavas are bursting with tropical flavor and packed with nutrients like vitamin C and fiber. Perfect for snacking or using in creative recipes.
-            <div style={styles.question}>Why Choose Our Guavas?</div>
-            <ul>
-              <li style={styles.point}>Harvested at peak ripeness for unmatched taste.</li>
-              <li style={styles.point}>Delivered in premium, protective packaging.</li>
-              <li style={styles.point}>Naturally sweet with a tropical flair.</li>
-            </ul>
-            <div style={styles.question}>Perfect for:</div>
-            <ul>
-              <li style={styles.point}>Fresh snacking.</li>
-              <li style={styles.point}>Smoothies and juices.</li>
-              <li style={styles.point}>Homemade jams and desserts.</li>
-            </ul>
-          </p>
-        </div>
-      </div>
     </div>
   );
 }
@@ -235,16 +210,12 @@ const styles = {
     padding: '20px',
     transition: 'transform 0.3s ease',
   },
-  sectionHover: {
-    transform: 'scale(1.05)',
-  },
   imageWrapper: {
     flex: 1,
     paddingRight: '20px',
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
-    transition: 'transform 0.3s ease',
   },
   image: {
     width: '100%',
@@ -289,6 +260,22 @@ const styles = {
     listStyleType: 'circle',
     fontSize: '16px',
     color: '#555',
+  },
+
+  // Responsive design for smaller screens
+  '@media (max-width: 768px)': {
+    section: {
+      flexDirection: 'column', // Stack content vertically on smaller screens
+    },
+    imageWrapper: {
+      marginBottom: '20px',
+    },
+    sectionTitle: {
+      fontSize: '20px', // Smaller titles on mobile
+    },
+    description: {
+      fontSize: '16px', // Smaller description font on mobile
+    },
   },
 };
 

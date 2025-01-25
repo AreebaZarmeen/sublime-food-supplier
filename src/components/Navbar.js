@@ -39,21 +39,21 @@ function Navbar() {
           alt="Home"
           style={styles.homeImage}
         />
-        
+
         {/* Navigation Buttons on Image */}
         <div style={styles.navButtonsWrapper}>
           {/* Home Button */}
-          <Link to="/" style={styles.link} onClick={handleOtherButtonClick}>
+          <Link to="/" style={styles.button} onClick={handleOtherButtonClick}>
             Home
           </Link>
 
           {/* About Us Button */}
-          <Link to="/about" style={styles.link} onClick={handleOtherButtonClick}>
+          <Link to="/about" style={styles.button} onClick={handleOtherButtonClick}>
             About Us
           </Link>
 
-          {/* Products Button */}
-          <button onClick={handleProductsClick} style={styles.link}>
+          {/* Products Button (without background color) */}
+          <button onClick={handleProductsClick} style={styles.buttonWithoutBg}>
             Products
           </button>
 
@@ -81,58 +81,118 @@ const styles = {
   container: {
     width: '100%',
     position: 'relative',
+    fontFamily: 'Arial, sans-serif',
   },
   imageWrapper: {
     position: 'relative',
-    overflow: 'hidden', // Prevents image from overflowing out of the container
+    overflow: 'hidden',
     width: '100%',
-    height: '33vh', // Adjust height for responsiveness
+    height: '33vh',
   },
   homeImage: {
     width: '100%',
     height: '100%',
-    objectFit: 'cover', // Ensures the image covers the whole area without distortion
+    objectFit: 'cover',
     position: 'absolute',
     top: 0,
     left: 0,
-    zIndex: 0, // Image is behind navigation buttons
-    transition: 'width 0.5s ease, height 0.5s ease', // Smooth transition when resizing
+    zIndex: 0,
+    transition: 'width 0.5s ease, height 0.5s ease',
   },
   navButtonsWrapper: {
     position: 'absolute',
-    bottom: '20px', // Positioned 20px from the bottom of the image
-    right: '20px', // Positioned 20px from the right of the image
+    bottom: '20px',
+    right: '20px',
     display: 'flex',
     flexDirection: 'row',
     gap: '15px',
     alignItems: 'center',
-    zIndex: 1, // Ensures the buttons appear on top of the image
+    zIndex: 1,
+    flexWrap: 'wrap',
+    justifyContent: 'center',
   },
-  link: {
+  
+  // Common button styles (for Home and About Us buttons)
+  button: {
     textDecoration: 'none',
     color: '#fff',
     fontWeight: 'bold',
-    padding: '12px 20px', // Standardized padding for the buttons
-    borderRadius: '8px',
-    backgroundColor: 'rgba(0, 123, 255, 0.8)',
+    padding: '12px 20px',
+    borderRadius: '15px',
     transition: 'background-color 0.3s, color 0.3s',
     cursor: 'pointer',
-    display: 'inline-block', // Ensures both <Link> and <button> behave similarly
+    display: 'inline-flex',
+    justifyContent: 'center',
+    alignItems: 'center',
     textAlign: 'center',
-    width: '120px', // Fixed width to make all buttons the same size
-    verticalAlign: 'middle', // Ensures vertical alignment is the same for button and link
+    width: '150px',
+    height: '50px',
+    backgroundColor: '#82C8E5',
+    marginBottom: '10px',
+    boxSizing: 'border-box',
+    border: '1px solid ',
+    fontSize: '24px', // Ensure consistent font size across all buttons
   },
-  dropdown: {
-    padding: '10px',
-    fontSize: '1rem',
-    borderRadius: '5px',
-    border: '1px solid #ddd',
-    backgroundColor: 'rgba(255, 255, 255, 0.8)',
-    color: '#007bff',
+
+  // Products button without background color
+  buttonWithoutBg: {
+    textDecoration: 'none',
+    color: '#fff',
     fontWeight: 'bold',
-    transition: 'background-color 0.3s, color 0.3s',
-    width: 'auto',
-    minWidth: '120px', // Ensure dropdown is also consistent with button size
+    padding: '12px 20px',
+    borderRadius: '15px',
+    transition: 'color 0.3s',
+    cursor: 'pointer',
+    display: 'inline-flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    textAlign: 'center',
+    width: '150px',
+    height: '50px',
+    marginBottom: '10px',
+    backgroundColor: '#82C8E5', // Remove the background color
+    border: '1px solid ', // Transparent border
+    boxSizing: 'border-box',
+    fontSize: '24px', // Match font size with other buttons
+  },
+  
+  dropdown: {
+    textDecoration: 'none',
+    color: 'black',
+    fontWeight: 'bold',
+    padding: '0 10px',
+    borderRadius: '8px',
+    backgroundColor: 'rgba(255, 255, 255, 0.9)',
+    border: '1px solid #ddd',
+    width: '250px',
+    height: '40px',
+    marginBottom: '10px',
+  },
+
+  // Responsive styles for smaller screens
+  '@media (max-width: 768px)': {
+    imageWrapper: {
+      height: '20vh',
+    },
+    navButtonsWrapper: {
+      bottom: '10px',
+      right: '10px',
+      flexDirection: 'column',
+      gap: '10px',
+    },
+    button: {
+      width: '100%',
+      fontSize: '14px',
+    },
+    buttonWithoutBg: {
+      width: '100%',
+      fontSize: '14px',
+      border: '2px solid transparent', // Transparent border on smaller screens as well
+    },
+    dropdown: {
+      width: '100%',
+      marginBottom: '20px',
+    },
   },
 };
 

@@ -15,9 +15,23 @@ function ContactUS() {
         </p>
 
         <p style={styles.paragraph}>
-          <strong>Location:</strong>
+          <strong>Location:</strong> 
           <span style={styles.infoText}> House#380 College Road, Sir Syed Town 213, Faisalabad, Pakistan, 38000</span>
         </p>
+
+        <div style={styles.contactForm}>
+          <h3 style={styles.formHeading}>Get in Touch</h3>
+          <input 
+            type="email" 
+            placeholder="Your email" 
+            style={styles.input} 
+          />
+          <textarea 
+            placeholder="Your message" 
+            style={styles.textarea} 
+          />
+          <button style={styles.button}>Send Message</button>
+        </div>
       </div>
     </div>
   );
@@ -50,9 +64,75 @@ const styles = {
     marginBottom: '20px',
   },
   infoText: {
-    color: ' #5D8AA8',
+    color: '#5D8AA8',
     fontWeight: '600',
     wordBreak: 'break-word',
+  },
+  contactForm: {
+    marginTop: '30px',
+    padding: '20px',
+    backgroundColor: '#fff',
+    borderRadius: '8px',
+    boxShadow: '0 4px 10px rgba(0, 0, 0, 0.1)',
+  },
+  formHeading: {
+    fontSize: '22px',
+    marginBottom: '20px',
+    color: '#333',
+  },
+  input: {
+    width: '100%',
+    padding: '12px',
+    marginBottom: '15px',
+    border: '1px solid #ddd',
+    borderRadius: '4px',
+    fontSize: '16px',
+  },
+  textarea: {
+    width: '100%',
+    padding: '12px',
+    height: '120px',
+    marginBottom: '15px',
+    border: '1px solid #ddd',
+    borderRadius: '4px',
+    fontSize: '16px',
+  },
+  button: {
+    width: '100%',
+    padding: '12px',
+    backgroundColor: '#4CAF50',
+    border: 'none',
+    borderRadius: '4px',
+    color: '#fff',
+    fontSize: '18px',
+    cursor: 'pointer',
+  },
+  // Media query for responsiveness
+  '@media (max-width: 768px)': {
+    container: {
+      padding: '20px',
+      maxWidth: '100%',
+    },
+    heading: {
+      fontSize: '24px',
+    },
+    content: {
+      fontSize: '16px',
+    },
+    formHeading: {
+      fontSize: '20px',
+    },
+    input: {
+      padding: '10px',
+      fontSize: '14px',
+    },
+    textarea: {
+      padding: '10px',
+      fontSize: '14px',
+    },
+    button: {
+      fontSize: '16px',
+    },
   },
 };
 

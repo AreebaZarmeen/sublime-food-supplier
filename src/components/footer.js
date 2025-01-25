@@ -1,7 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom'; // Import Link for navigation
 
 function Footer() {
+  const [hover, setHover] = useState(false); // Track hover state
+
   return (
     <footer style={styles.footer}>
       <p style={styles.copyRight}>
@@ -11,7 +13,14 @@ function Footer() {
       {/* Contact Us link at the bottom */}
       <ul style={styles.linkList}>
         <li style={styles.listItem}>
-          <Link to="/contact" style={styles.link}>Contact Us</Link>
+          <Link 
+            to="/contact" 
+            style={hover ? { ...styles.link, ...styles.linkHover } : styles.link}
+            onMouseEnter={() => setHover(true)}  // Set hover to true when mouse enters
+            onMouseLeave={() => setHover(false)} // Set hover to false when mouse leaves
+          >
+            Contact Us
+          </Link>
         </li>
       </ul>
     </footer>
@@ -27,11 +36,11 @@ const styles = {
     color: '#fff',
     marginTop: '40px',
     borderTop: '4px solid #4CAF50', // Green border at the top
+    fontFamily: 'Arial, sans-serif',
   },
   copyRight: {
     fontSize: '16px',
     marginBottom: '20px',
-    fontFamily: 'Arial, sans-serif',
   },
   linkList: {
     listStyleType: 'none',
@@ -51,7 +60,44 @@ const styles = {
   },
   linkHover: {
     color: '#fff', // Change link color to white on hover
-  }
+  },
+  
+  // Media Queries for responsiveness
+  '@media (max-width: 768px)': {
+    footer: {
+      padding: '20px 10px', // Reduced padding for smaller screens
+    },
+    copyRight: {
+      fontSize: '14px', // Smaller font size for copyright
+      marginBottom: '15px',
+    },
+    linkList: {
+      textAlign: 'center', // Center links on smaller screens
+    },
+    listItem: {
+      display: 'block', // Stack the items vertically
+      margin: '5px 0', // Adjust margins for better spacing
+    },
+    link: {
+      fontSize: '16px', // Reduce link size for smaller screens
+    },
+  },
+
+  '@media (max-width: 480px)': {
+    footer: {
+      padding: '15px 5px', // Even more reduced padding on very small screens
+    },
+    copyRight: {
+      fontSize: '14px', // Consistent with medium screen size
+      marginBottom: '10px',
+    },
+    linkList: {
+      marginTop: '10px', // Add some spacing between text and links
+    },
+    link: {
+      fontSize: '16px', // Ensure readability on small devices
+    },
+  },
 };
 
 export default Footer;

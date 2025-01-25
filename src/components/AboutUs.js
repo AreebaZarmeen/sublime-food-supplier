@@ -40,14 +40,14 @@ function AboutUs() {
   );
 }
 
-// Inline styles
+// Responsive styles
 const styles = {
   container: {
     fontFamily: 'Arial, sans-serif',
     lineHeight: '1.8',
-    padding: '30px',
+    padding: '5%',
     margin: '0 auto',
-    maxWidth: '1200px',
+    maxWidth: '90%',
     backgroundColor: '#f9f9f9',
     borderRadius: '8px',
     boxShadow: '0 4px 10px rgba(0, 0, 0, 0.1)',
@@ -55,16 +55,16 @@ const styles = {
   heading: {
     textAlign: 'center',
     color: '#4CAF50',
-    marginBottom: '30px',
-    fontSize: '32px',
+    marginBottom: '20px',
+    fontSize: 'calc(1.5rem + 1vw)',
     fontWeight: '700',
     letterSpacing: '1px',
     textTransform: 'uppercase',
   },
   introText: {
-    fontSize: '18px',
+    fontSize: '1rem',
     color: '#333',
-    marginBottom: '25px',
+    marginBottom: '15px',
     textAlign: 'justify',
   },
   content: {
@@ -73,28 +73,22 @@ const styles = {
     lineHeight: '1.8',
   },
   paragraph: {
-    marginBottom: '20px',
+    marginBottom: '15px',
     textAlign: 'justify',
-    fontSize: '17px',
+    fontSize: 'calc(0.9rem + 0.3vw)',
     color: '#444',
   },
   list: {
     listStyleType: 'none',
     padding: 0,
     marginTop: '10px',
-    fontSize: '16px',
+    fontSize: 'calc(0.8rem + 0.3vw)',
     color: '#555',
   },
   listItem: {
-    marginBottom: '12px',
-    fontSize: '17px',
+    marginBottom: '10px',
+    fontSize: 'calc(0.9rem + 0.2vw)',
     lineHeight: '1.6',
-  },
-  boldText: {
-    fontWeight: 'bold',
-  },
-  highlightText: {
-    color: '#4CAF50',
   },
 };
 
