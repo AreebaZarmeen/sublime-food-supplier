@@ -19,19 +19,7 @@ function ContactUS() {
           <span style={styles.infoText}> House#380 College Road, Sir Syed Town 213, Faisalabad, Pakistan, 38000</span>
         </p>
 
-        <div style={styles.contactForm}>
-          <h3 style={styles.formHeading}>Get in Touch</h3>
-          <input 
-            type="email" 
-            placeholder="Your email" 
-            style={styles.input} 
-          />
-          <textarea 
-            placeholder="Your message" 
-            style={styles.textarea} 
-          />
-          <button style={styles.button}>Send Message</button>
-        </div>
+       
       </div>
     </div>
   );
