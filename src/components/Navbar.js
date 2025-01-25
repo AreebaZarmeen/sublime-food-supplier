@@ -1,13 +1,26 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 
 function Navbar() {
   const navigate = useNavigate();
+  const [isDropdownVisible, setDropdownVisible] = useState(false);
 
+  // Function to handle products button click
+  const handleProductsClick = () => {
+    navigate('/fruits');
+    setDropdownVisible(true); // Show dropdown when navigating to fruits page
+  };
+
+  // Function to handle other button clicks and hide the dropdown
+  const handleOtherButtonClick = () => {
+    setDropdownVisible(false); // Hide the dropdown when clicking other buttons
+  };
+
+  // Handle the selection from the dropdown menu
   const handleNavigation = (e) => {
     const section = e.target.value;
     if (section === 'fruits') {
-      navigate('/fruits'); // Navigate to the fruits page (if required)
+      navigate('/fruits'); // Stay on the fruits page
     } else {
       const targetSection = document.getElementById(section);
       if (targetSection) {
@@ -29,23 +42,35 @@ function Navbar() {
         
         {/* Navigation Buttons on Image */}
         <div style={styles.navButtonsWrapper}>
-          <Link to="/" style={styles.link}>
+          {/* Home Button */}
+          <Link to="/" style={styles.link} onClick={handleOtherButtonClick}>
             Home
           </Link>
-          <Link to="/about" style={styles.link}>
-            About
+
+          {/* About Us Button */}
+          <Link to="/about" style={styles.link} onClick={handleOtherButtonClick}>
+            About Us
           </Link>
-          <select onChange={handleNavigation} style={styles.dropdown}>
-            <option value="fruits">Products</option>
-            <option value="grapes-section">Grapes</option>
-            <option value="potato-section">Potatoes</option>
-            <option value="mango-section">Mango</option>
-            <option value="orange-section">Orange</option>
-            <option value="apple-section">Apple</option>
-            <option value="grapefruit-section">Grapefruit</option>
-            <option value="melon-section">Melon</option>
-            <option value="guava-section">Guava</option>
-          </select>
+
+          {/* Products Button */}
+          <button onClick={handleProductsClick} style={styles.link}>
+            Products
+          </button>
+
+          {/* Dropdown, appears when the user is on the fruits page */}
+          {isDropdownVisible && (
+            <select onChange={handleNavigation} style={styles.dropdown}>
+              <option value="fruits">Items</option>
+              <option value="grapes-section">Grapes</option>
+              <option value="potato-section">Potatoes</option>
+              <option value="mango-section">Mango</option>
+              <option value="orange-section">Orange</option>
+              <option value="apple-section">Apple</option>
+              <option value="grapefruit-section">Grapefruit</option>
+              <option value="melon-section">Melon</option>
+              <option value="guava-section">Guava</option>
+            </select>
+          )}
         </div>
       </div>
     </div>
@@ -63,7 +88,6 @@ const styles = {
     width: '100%',
     height: '33vh', // Adjust height for responsiveness
   },
-  // Image that resizes responsively
   homeImage: {
     width: '100%',
     height: '100%',
@@ -88,10 +112,15 @@ const styles = {
     textDecoration: 'none',
     color: '#fff',
     fontWeight: 'bold',
-    padding: '10px 20px',
-    borderRadius: '5px',
+    padding: '12px 20px', // Standardized padding for the buttons
+    borderRadius: '8px',
     backgroundColor: 'rgba(0, 123, 255, 0.8)',
     transition: 'background-color 0.3s, color 0.3s',
+    cursor: 'pointer',
+    display: 'inline-block', // Ensures both <Link> and <button> behave similarly
+    textAlign: 'center',
+    width: '120px', // Fixed width to make all buttons the same size
+    verticalAlign: 'middle', // Ensures vertical alignment is the same for button and link
   },
   dropdown: {
     padding: '10px',
@@ -102,6 +131,8 @@ const styles = {
     color: '#007bff',
     fontWeight: 'bold',
     transition: 'background-color 0.3s, color 0.3s',
+    width: 'auto',
+    minWidth: '120px', // Ensure dropdown is also consistent with button size
   },
 };
 
