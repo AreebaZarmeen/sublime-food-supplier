@@ -8,7 +8,7 @@ function Fruits() {
       {/* Grapes Section */}
       <div id="grapes-section" style={styles.section}>
         <div style={styles.imageWrapper}>
-          <img src="/assets/Grapes.jpeg" alt="Grapes" style={styles.image} />
+          <img src={`${process.env.PUBLIC_URL}/assets/Grapes.jpeg`} alt="Grapes" style={styles.image} />
         </div>
         <div style={styles.textWrapper}>
           <h3 style={styles.sectionTitle}>Grapes</h3>
@@ -33,7 +33,7 @@ function Fruits() {
       {/* Potatoes Section */}
       <div id="potato-section" style={styles.section}>
         <div style={styles.imageWrapper}>
-          <img src="/assets/potatoPack.jpeg" alt="Potatoes" style={styles.image} />
+          <img src={`${process.env.PUBLIC_URL}/assets/potatoPack.jpeg`} alt="Potatoes" style={styles.image} />
         </div>
         <div style={styles.textWrapper}>
           <h3 style={styles.sectionTitle}>Potatoes</h3>
@@ -58,7 +58,7 @@ function Fruits() {
       {/* Mango Section */}
       <div id="mango-section" style={styles.section}>
         <div style={styles.imageWrapper}>
-          <img src="/assets/MangoBox.jpeg" alt="Mango" style={styles.image} />
+          <img src={`${process.env.PUBLIC_URL}/assets/MangoBox.jpeg`} alt="Mango" style={styles.image} />
         </div>
         <div style={styles.textWrapper}>
           <h3 style={styles.sectionTitle}>Mango</h3>
@@ -83,7 +83,7 @@ function Fruits() {
       {/* Orange Section */}
       <div id="orange-section" style={styles.section}>
         <div style={styles.imageWrapper}>
-          <img src="/assets/Orange.jpeg" alt="Orange" style={styles.image} />
+          <img src={`${process.env.PUBLIC_URL}/assets/Orange.jpeg`} alt="Orange" style={styles.image} />
         </div>
         <div style={styles.textWrapper}>
           <h3 style={styles.sectionTitle}>Orange</h3>
@@ -108,7 +108,7 @@ function Fruits() {
       {/* Melon Section */}
       <div id="melons-section" style={styles.section}>
         <div style={styles.imageWrapper}>
-          <img src="/assets/melons.jpg" alt="Melon" style={styles.image} />
+          <img src={`${process.env.PUBLIC_URL}/assets/melons.jpg`} alt="Melon" style={styles.image} />
         </div>
         <div style={styles.textWrapper}>
           <h3 style={styles.sectionTitle}>Melon</h3>
@@ -133,7 +133,7 @@ function Fruits() {
       {/* Apple Section */}
       <div id="apple-section" style={styles.section}>
         <div style={styles.imageWrapper}>
-          <img src="/assets/apples.jpg" alt="Apple" style={styles.image} />
+          <img src={`${process.env.PUBLIC_URL}/assets/apples.jpg`} alt="Apple" style={styles.image} />
         </div>
         <div style={styles.textWrapper}>
           <h3 style={styles.sectionTitle}>Apple</h3>
@@ -158,7 +158,7 @@ function Fruits() {
       {/* Grapefruit Section */}
       <div id="grapefruit-section" style={styles.section}>
         <div style={styles.imageWrapper}>
-          <img src="/assets/grapefruite.jpg" alt="Grapefruit" style={styles.image} />
+          <img src={`${process.env.PUBLIC_URL}/assets/grapefruite.jpg`} alt="Grapefruit" style={styles.image} />
         </div>
         <div style={styles.textWrapper}>
           <h3 style={styles.sectionTitle}>Grapefruit</h3>
@@ -183,7 +183,7 @@ function Fruits() {
       {/* Guava Section */}
       <div id="guava-section" style={styles.section}>
         <div style={styles.imageWrapper}>
-          <img src="/assets/guava.jpg" alt="Guava" style={styles.image} />
+          <img src={`${process.env.PUBLIC_URL}/assets/guava.jpg`} alt="Guava" style={styles.image} />
         </div>
         <div style={styles.textWrapper}>
           <h3 style={styles.sectionTitle}>Guava</h3>

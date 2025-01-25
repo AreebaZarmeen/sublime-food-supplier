@@ -1,9 +1,16 @@
 import React from 'react';
 import { Link } from 'react-router-dom'; // Import Link for routing
+import { Helmet } from 'react-helmet'; // For SEO optimization
 
 function Home() {
   return (
     <div style={styles.container}>
+      {/* SEO Optimization */}
+      <Helmet>
+        <title>Welcome to Sublime Food Supplier</title>
+        <meta name="description" content="Global exporter of fresh fruits and vegetables. Quality and sustainability are our priority." />
+      </Helmet>
+
       <h1 style={styles.heading}>Welcome to Sublime Food Supplier</h1>
       <p style={styles.introText}>
         We are a leading global exporter of fresh fruits and vegetables. Our journey is driven by our commitment to quality, sustainability, and fresh produce that arrives on time, every time. Whether you are a retailer, wholesaler, or distributor, we ensure top-quality produce that meets the demands of your business.
@@ -12,7 +19,13 @@ function Home() {
       {/* Section 1: Our Fields */}
       <div style={styles.section}>
         <div style={styles.imageWrapper}>
-          <img src="/assets/field.jpeg" alt="Farming Fields" style={styles.image} />
+          <img 
+            src={`${process.env.PUBLIC_URL}/assets/field.jpeg`} 
+            alt="Farming Fields" 
+            style={styles.image} 
+            role="img" 
+            aria-label="Farming fields where produce is grown"
+          />
         </div>
         <div style={styles.textWrapper}>
           <h3 style={styles.sectionTitle}>Our Fields: Where Quality Begins</h3>
@@ -24,17 +37,21 @@ function Home() {
           </p>
         </div>
       </div>
-      
+
       {/* Section 2: Field Cleaning */}
       <div style={styles.section}>
         <div style={styles.imageWrapper}>
-          {/* No image for this section */}
-          <img src="/assets/tree.jpeg" alt="Farming" style={styles.image} />
+          <img 
+            src={`${process.env.PUBLIC_URL}/assets/tree.jpeg`} 
+            alt="Farming" 
+            style={styles.image} 
+            role="img" 
+            aria-label="Tree farming"
+          />
         </div>
         <div style={styles.textWrapper}>
           <h3 style={styles.sectionTitle}>Field Cleaning: Ensuring Purity and Freshness</h3>
           <p style={styles.text}>
-          
             After harvest, our produce undergoes a meticulous cleaning process. We use filtered water to remove any dirt, pesticides, or residues from the fields, ensuring that each item is pristine and safe for consumption. Our washing process guarantees that only the highest quality produce makes it to the next stage.
           </p>
           <p style={styles.text}>
@@ -46,7 +63,13 @@ function Home() {
       {/* Section 3: Packaging */}
       <div style={styles.section}>
         <div style={styles.imageWrapper}>
-          <img src="/assets/orangepackBox.jpeg" alt="Packaging Process" style={styles.image} />
+          <img 
+            src={`${process.env.PUBLIC_URL}/assets/orangepackBox.jpeg`} 
+            alt="Packaging Process" 
+            style={styles.image} 
+            role="img" 
+            aria-label="Packing fresh produce"
+          />
         </div>
         <div style={styles.textWrapper}>
           <h3 style={styles.sectionTitle}>Packaging: Preserving Freshness for Global Delivery</h3>
@@ -57,10 +80,34 @@ function Home() {
             From recyclable boxes to breathable films, we use only the best packaging materials to ensure that the produce remains fresh throughout the shipping process. Our packaging also meets international standards for safety, hygiene, and sustainability.
           </p>
           <div style={styles.imageGrid}>
-            <img src="/assets/orangeBucket.jpeg" alt="Packaging Process" style={styles.gridImage} />
-            <img src="/assets/Grapes.jpeg" alt="Packaging Process" style={styles.gridImage} />
-            <img src="/assets/potatoPack.jpeg" alt="Packaging Process" style={styles.gridImage} />
-            <img src="/assets/MangoBox.jpeg" alt="Packaging Process" style={styles.gridImage} />
+            <img 
+              src={`${process.env.PUBLIC_URL}/assets/orangeBucket.jpeg`} 
+              alt="Packaging Process" 
+              style={styles.gridImage} 
+              role="img" 
+              aria-label="Orange packaging"
+            />
+            <img 
+              src={`${process.env.PUBLIC_URL}/assets/Grapes.jpeg`} 
+              alt="Packaging Process" 
+              style={styles.gridImage} 
+              role="img" 
+              aria-label="Grapes packaging"
+            />
+            <img 
+              src={`${process.env.PUBLIC_URL}/assets/potatoPack.jpeg`} 
+              alt="Packaging Process" 
+              style={styles.gridImage} 
+              role="img" 
+              aria-label="Potato packaging"
+            />
+            <img 
+              src={`${process.env.PUBLIC_URL}/assets/MangoBox.jpeg`} 
+              alt="Packaging Process" 
+              style={styles.gridImage} 
+              role="img" 
+              aria-label="Mango packaging"
+            />
           </div>
         </div>
       </div>
@@ -68,7 +115,13 @@ function Home() {
       {/* Section 4: Transportation */}
       <div style={styles.section}>
         <div style={styles.imageWrapper}>
-          <img src="/assets/container.jpeg" alt="Transportation" style={styles.image} />
+          <img 
+            src={`${process.env.PUBLIC_URL}/assets/container.jpeg`} 
+            alt="Transportation" 
+            style={styles.image} 
+            role="img" 
+            aria-label="Shipping container"
+          />
         </div>
         <div style={styles.textWrapper}>
           <h3 style={styles.sectionTitle}>Transportation: Timely, Safe Delivery Worldwide</h3>
@@ -98,7 +151,13 @@ function Home() {
       {/* Section 6: Explore Our Products */}
       <div style={styles.section}>
         <div style={styles.imageWrapper}>
-          <img src="/assets/Orange.jpeg" alt="Fresh Produce" style={styles.image} />
+          <img 
+            src={`${process.env.PUBLIC_URL}/assets/Orange.jpeg`} 
+            alt="Fresh Produce" 
+            style={styles.image} 
+            role="img" 
+            aria-label="Fresh oranges"
+          />
         </div>
         <div style={styles.textWrapper}>
           <h3 style={styles.sectionTitle}>Explore Our Products</h3>
@@ -106,10 +165,34 @@ function Home() {
             Discover the wide variety of fresh fruits and vegetables we offer. We carefully select only the best produce to meet the demands of our clients worldwide. Our range includes seasonal favorites, exotic fruits, and vegetables that are harvested at their peak of ripeness.
           </p>
           <div style={styles.imageGrid}>
-            <img src="/assets/mangoBucket.jpg" alt="Fresh Produce" style={styles.gridImage} />
-            <img src="/assets/rawPotato.jpeg" alt="Fresh Produce" style={styles.gridImage} />
-            <img src="/assets/Grapes.jpeg" alt="Fresh Produce" style={styles.gridImage} />
-            <img src="/assets/orangeBucket.jpeg" alt="Fresh Produce" style={styles.gridImage} />
+            <img 
+              src={`${process.env.PUBLIC_URL}/assets/mangoBucket.jpg`} 
+              alt="Fresh Produce" 
+              style={styles.gridImage} 
+              role="img" 
+              aria-label="Mangoes"
+            />
+            <img 
+              src={`${process.env.PUBLIC_URL}/assets/rawPotato.jpeg`} 
+              alt="Fresh Produce" 
+              style={styles.gridImage} 
+              role="img" 
+              aria-label="Fresh potatoes"
+            />
+            <img 
+              src={`${process.env.PUBLIC_URL}/assets/Grapes.jpeg`} 
+              alt="Fresh Produce" 
+              style={styles.gridImage} 
+              role="img" 
+              aria-label="Fresh grapes"
+            />
+            <img 
+              src={`${process.env.PUBLIC_URL}/assets/orangeBucket.jpeg`} 
+              alt="Fresh Produce" 
+              style={styles.gridImage} 
+              role="img" 
+              aria-label="Oranges in a bucket"
+            />
           </div>
           <p style={styles.text}>
             Whether you need citrus fruits, berries, leafy greens, or root vegetables, we have a product that fits your needs. Each item is packed with nutrients and flavor, ensuring your customers are satisfied with every bite.
@@ -212,6 +295,10 @@ const styles = {
     color: '#4CAF50',
     textDecoration: 'none',
     fontWeight: 'bold',
+    transition: 'color 0.3s ease',
+  },
+  contactLinkHover: {
+    color: '#3e8e41', // A darker green for hover effect
   },
 };
 

@@ -22,10 +22,9 @@ function Navbar() {
       {/* Home Image */}
       <div style={styles.imageWrapper}>
         <img
-          src="/assets/home2.avif" // Replace with your image path
-          alt="Home"
-          style={styles.homeImage}
-        />
+         src={`${process.env.PUBLIC_URL}/assets/home2.avif`} alt="Home" style={styles.homeImage} />
+
+        
 
         {/* Navigation Buttons on Image */}
         <div style={styles.navButtonsWrapper}>
